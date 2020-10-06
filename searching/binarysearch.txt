@@ -1,0 +1,43 @@
+// binary search
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int bsearch(int[],int,int,int);
+
+void main()
+{
+ int a={1,2,3,4,5,6,7,8,9,10};
+ int l;int r;int result;int key;
+ l=0;r=9;
+
+ printf("Enter the key element \n");
+ scanf("%d",&key);
+ result=bsearch(a,l,r,key);
+
+ if(result>=0)
+    printf("Key is found at index %d \n",result);
+ else
+    printf("Not found \n");
+}
+
+int bsearch(int arr[],int left,int right,int key)
+ {
+   int middle;
+   if(left<=right)
+     {
+        middle=(left+right)/2;
+        if(key<arr[middle])
+          return bsearch(arr,left,middle-1,key);
+        else if(key>arr[middle])
+          return bsearch(arr,middle+1,right,key);
+        else
+          return middle;
+     }
+ else
+   return middle;
+ }
+
+return -1;
+
+}
