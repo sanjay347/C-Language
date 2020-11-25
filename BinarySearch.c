@@ -1,5 +1,7 @@
 #include<stdio.h>
- 
+
+// Function to Search an Element from an array of size n. 
+
 int main()
 {
     int arr[50],i,n,x,flag=0,first,last,mid;
